@@ -1,0 +1,10 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "花卉商城",
+  "backgroundColor": "#fdeeee",
+  "backgroundTextStyle": "light",
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "nav-bar": "/commpents/headNavigation/headNavigation"
+  }
+}

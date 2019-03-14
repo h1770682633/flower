@@ -1,0 +1,59 @@
+<!--pages/detailList/detailList.wxml-->
+<!-- 引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="container" style='margin-top: {{height}}px'>
+  <view class='list-top-wrap'>
+    <image class='list-top-img' src='http://192.168.1.109:8080/wx-img/img2.jpg' mode='aspectFill'></image>
+    <text class='list-top-price list-top-text'>￥<text>52</text></text>
+    <text class='list-top-name list-top-text'>泡茶菊花</text>
+    <view class='list-money-text list-top-text'>
+      <text class='list-top-kdfy'>快递<text>0</text>元</text>
+      <text class='list-top-num'>月销<text>0</text>笔</text>
+    </view>
+  </view>
+  <view class='detail-server-text detail-list-text'>
+    <text class='detail-text-title'>服务</text> 
+    <text class='detail-text-content'>2小时极速发货.花品新鲜保证</text>
+  </view>
+  <view class='detail-information-wrap'>
+    <view class='detail-list-text'><text class='detail-text-title'>品种</text> <text class='detail-text-content'>菊花料</text></view>
+    <view class='detail-list-text'><text class='detail-text-title'>货号</text> <text class='detail-text-content'>0101001</text></view>
+    <view class='detail-list-text'>
+      <text class='detail-text-title'>适用空间</text>
+      <text class='detail-text-content'>任何场所任何场所任何场所任何场所任何场所</text>
+    </view>
+    <view class='detail-list-text'><text class='detail-text-title'>是否含盆</text> <text class='detail-text-content'>不含盆</text></view>
+    <view class='detail-list-text'><text class='detail-text-title'>高度</text> <text class='detail-text-content'>100m</text></view>
+  </view>
+  <!-- 先直接写着再说，后期再换成templete或者include引入，组件（?） start-->
+  <view class='detail-comment-box'>
+    <view class='comment-top-text-wrap'>
+      <text class='comment-top-text1'>宝贝评论</text>
+      <navigator class='comment-look-more' hover-class='none'>查看全部</navigator>
+    </view>
+    <view class='comment-person'>
+      <image src='http://192.168.1.109:8080/wx-img/img3.jpg' mode='aspectFit'></image>
+      <view class='comment-person-infro'>
+        <text class='comment-person-name'>小欧</text>
+        <text class='comment-person-time'>2019-01-30 17:04:31</text>
+        <text class='comment-person-say'>菊花茶很好喝</text>
+      </view>
+    </view>
+  </view>
+  <!-- end  -->
+  <!-- 详情页面片段start -->
+    <view class='goods-detail'>
+      <text class='goods-detail-text'>商品详情</text>
+      <text class='goods-detail-information'>菊花泡龙井称之“菊井” ，泡普洱称之“菊普”，菊与茶合用，相得益彰。冰镇并加有冰糖或蜂蜜的菊花茶，具有清凉、降火   气、润喉等功效，十分受人欢迎。明清时代菊花茶就作为清凉茶饮用，到清朝已广泛应用于民众生活中。随着生活水平的提高，人们越来越重视生活的质量，因而具有多重保健功能的茶用菊花也越来越受到人们的喜爱。
+      </text> 
+      <image class='goods-detail-img' src='http://192.168.1.109:8080/wx-img/img2.jpg' mode='aspectFill'></image>
+    </view>
+    <!-- 详情页面片段end -->
+</view>
+<view class='detail-bottom-wrap'>
+  <text class='detail-price'>￥ <text>52</text></text>
+  <view class='detail-bottom-btn-wrap'>
+    <text class='detail-btn-add'>加入购物车</text>
+    <text class='detail-btn-pay'>立即购买</text>
+  </view>
+</view>

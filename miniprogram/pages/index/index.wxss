@@ -1,0 +1,104 @@
+/**index.wxss**/
+
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.container .page-top-img{
+  display: block;
+  width: 100%;
+  margin-top:0.5rem; 
+  height: auto;
+  overflow: visible;
+}
+.container .page-title{
+  position: relative;
+  margin-top: .8rem;
+}
+.container .page-title text{
+  display: block;
+  text-align: center;
+  font-size: .8rem;
+  color: #2b503d;
+}
+.container .page-title::after{
+  position: absolute;
+  content: '';
+  background: url(http://192.168.1.109:8080/wx-img/tit1.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 123rpx;
+  height: 49rpx;
+  top: 50%;
+  left: -136rpx;
+  transform: translateY(-50%);
+}
+.container .page-title::before{
+  position: absolute;
+  content: '';
+  background: url(http://192.168.1.109:8080/wx-img/tit2.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 122rpx;
+  height: 50rpx;
+  top: 50%;
+  right: -135rpx;
+  transform: translateY(-50%);
+}
+.container .page1-content-box{
+  margin-top: 50rpx;
+  width: 95%;
+}
+.container .page1-content-box .page1-content-wrap{
+  position: relative;
+  width: 47%;
+  height: 600rpx;
+  background: #fff;
+  /* border: 2rpx solid rgba(0,0,0,0); */
+  border-radius: 12rpx;
+  margin-bottom: 22rpx;
+  overflow: hidden;
+}
+.container .page1-content-box .page1-content-wrap:nth-child(2n-1){
+  float: left;
+}
+.container .page1-content-box .page1-content-wrap:nth-child(2n){
+  float: right;
+}
+.page1-content-box .page1-content-wrap .page1-content-img-wrap{
+  width: 100%;
+  position: relative;
+  height: 400rpx;
+}
+.page1-content-box .page1-content-wrap image{
+  width: 100%;
+  height: 100%;
+}
+.page1-content-box .page1-content-wrap text{
+  width: 100%;
+  margin-top: 10rpx;
+  text-align: center;
+  display: block;
+  color: #333333;
+  font-size: 30rpx;
+}
+.page1-content-box .page1-content-wrap .page1-content-price{
+  color: #ff7d7d;
+  margin-top: 20rpx;
+}
+.page1-content-box .page1-content-wrap .page1-content-num{
+  position: absolute;
+  height: 64rpx;
+  left:0;
+  bottom: 0;
+  border-top: 2rpx solid #eaeaea;
+  line-height: 64rpx;
+}
+/* swiper */
+.swiper1{
+  width: 100%;
+  height: 8.88rem;
+}
+.swiper1 .swiperItem image{
+  width: 100%;
+  height: 100%;
+}

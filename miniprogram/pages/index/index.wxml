@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+    <swiper class='swiper1' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+            interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px"
+            bindchange="bindchange" bindanimationfinish="bindanimationfinish" bindtransition="bindtransition"
+            >
+        <block wx:for="{{siwperImgUrl}}" wx:key="*this">
+            <swiper-item class="swiperItem">
+                <image src="{{item}}" mode='widthFix'></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- <image class='page-top-img' src="http://192.168.1.109:8080/wx-img/banner.png" mode='widthFix'></image> -->
+    <view class='page-title'>
+        <text>鲜切花</text>
+        <text>Fresh cut flower</text>
+    </view>
+    <view class='page1-content-box clearfix'>
+        <navigator class='page1-content-wrap' hover-class='none' url='../detailList/detailList'>
+            <view class='page1-content-img-wrap'>
+                <image src='{{cloudUrl+"img1.jpg"}}' mode='aspectFill'></image>
+                <!-- <image src='http://192.168.1.109:8080/wx-img/img1.jpg' mode='aspectFill'></image> -->
+            </view>
+            <text class='page1-content-text'>红粉佳人(鲜切花)</text>
+            <text class='page1-content-price'>￥447</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator>
+        <navigator class='page1-content-wrap' hover-class='none' url='../detailList/detailList'>
+            <view class='page1-content-img-wrap'>
+                <image src='http://192.168.1.109:8080/wx-img/img2.jpg' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>泡茶菊花</text>
+            <text class='page1-content-price'>￥52</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator>
+    </view>
+    <view class='page-title page-title2'>
+        <text>多肉植物</text>
+        <text>Succulent plants</text>
+    </view>
+     <view class='page-title page-title3'>
+        <text>绿植</text>
+        <text>Green planting</text>
+    </view>
+    <view class='page1-content-box page1-content-box2 clearfix'> 
+        <navigator class='page1-content-wrap' hover-class='none'>
+            <view class='page1-content-img-wrap'>
+                <image src='http://192.168.1.109:8080/wx-img/img3.jpg' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>绿植(绿植)</text>
+            <text class='page1-content-price'>￥15.8</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator>  
+        <navigator class='page1-content-wrap' hover-class='none'>
+            <view class='page1-content-img-wrap'>
+                <image src='http://192.168.1.109:8080/wx-img/img4.jpg' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>绿植(绿植)</text>
+            <text class='page1-content-price'>￥8.88</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator>    
+    </view>
+</view>

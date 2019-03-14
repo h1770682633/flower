@@ -1,0 +1,30 @@
+<!--pages/addAddress/addAddress.wxml-->
+<!-- 引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<import src="../../template/model.wxml"/>
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="container" style='margin-top: {{height}}px'>
+  <view class='user-name input-wrap'>
+    收货人：<input placeholder='请输入收货人的姓名'></input>
+  </view>
+  <view class='uesr-phone-num input-wrap'>
+    手机号码： <input placeholder='请输入收货人手机号码'></input>
+  </view>
+  <view class='user-address input-wrap'>
+    <text class='user-address-selected' bindtap="translate">收获人地址：<text class='address-selected'></text>{{province}} {{city}} {{county}}</text>
+    <textarea placeholder='请输入详细的地址'></textarea>
+  </view>
+  <view class='uesr-code input-wrap'>
+    邮政编码：
+    <input placeholder='请输入邮政编码'></input>
+  </view>
+  <view class='user-switch-wrap input-wrap'>
+    <text class='user-switch-text'>设置为默认地址:</text>
+    <switch class='user-switch'></switch>
+  </view>
+</view>
+<view class='address-bottom'>
+  <navigator class='user-add-address'>
+    保存新地址
+  </navigator>
+</view>
+<template is="areaData" data="{{...item}}"/>

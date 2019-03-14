@@ -1,0 +1,120 @@
+/* pages/userConsole/userConsole.wxss */
+
+/* @import "../../style/guide.wxss"; */
+page{
+  height: auto;
+}
+.selected-address{
+  position: relative;
+  width: 93%;
+  margin: 12rpx auto 0;
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding-left: 26rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  font-size: 36rpx;
+  color: #000;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px #ccc;
+  box-sizing: border-box;
+}
+.selected-address::before{
+  position: absolute;
+  content: '';
+  background: url(http://192.168.1.109:8080/wx-img/right-arrow.png) no-repeat center/cover;
+  width: 32rpx;
+  height: 32rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50rpx;
+}
+.goods-box{
+  box-sizing: border-box;
+  width: 93%;
+  height: auto;
+  margin: 36rpx auto 0;
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 0 30rpx;
+}
+.goods-box .goods-wrap{
+  position: relative;
+  width: 100%;
+  height: 190rpx;
+  border-bottom: 1rpx dashed #ccc;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.goods-box .goods-wrap:last-of-type{
+  border-bottom: none;
+}
+.goods-wrap .goods-imgs-wrap{
+  height: 100%;
+  width: 140rpx;
+}
+.goods-wrap .goods-imgs-wrap .goods-imgs{
+  width: 100%;
+  height: 100%;
+}
+.goods-wrap .goods-text-wrap{
+  margin-left: 26rpx;
+  font-size: 28rpx;
+  height: 65%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goods-wrap .goods-text-wrap .goods-text-name{
+  color: #333333;
+}
+.goods-wrap .goods-text-wrap .goods-text-pen{
+  color: #999999;
+  font-size: 24rpx;
+}
+.goods-wrap .goods-text-wrap .goods-text-num{
+  color: #999999;
+}
+.goods-wrap .goods-price-wrap{
+  position: absolute;
+  color: #999999;
+  bottom: 46rpx;
+  right: 50rpx;
+  font-size: 26rpx;
+}
+.goods-wrap .goods-price-wrap .goods-price{
+  color: #ff4101;
+  font-size: 32rpx;
+}
+.goods-buy-wrap{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 96rpx;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  font-size: 40rpx;
+}
+.goods-buy-wrap .goods-buy-text{
+  height: 100%;
+  line-height: 96rpx;
+}
+.goods-buy-wrap .goods-buy-price-wrap{
+  color: #ff4101;
+}
+.goods-buy-wrap .goods-btn-buy{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20rpx;
+  width: 200rpx;
+  height: 65rpx;
+  font-size: 32rpx;
+  line-height: 65rpx;
+  background: #ff4101;
+  color: #ffffff;
+}

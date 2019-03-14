@@ -1,0 +1,46 @@
+<!--pages/orderPage/orderPage.wxml-->
+<!-- 引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="container" style='margin-top: {{height}}px'>
+  <view class='address-box'>
+    <block wx:for="{{addressList}}" wx:key="index">
+      <view class='address-wrap'>
+        <view class='address-infro-wrap'>
+          <view class='address-infro'>
+            <text class='user-name'>{{item.name}}</text>
+            <text class='user-address'>{{item.address}}</text>
+          </view>
+          <text class='user-phone'>{{item.phoneNumber}}</text>
+        </view>
+        <view class='user-bottom'>
+          <view class='user-selected {{index==bl?"active":""}}' bindtap='changeSelect' data-num='{{index}}'><icon></icon>设为默认地址</view>
+          <view class='user-btn-wrap'>
+            <text class='user-bj' data-num="{{index}}">编辑</text>
+            <text class='user-delete' bindtap='deleteItem' data-num="{{index}}">删除</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- <view class='address-wrap'>
+      <view class='address-infro-wrap'>
+        <view class='address-infro'>
+          <text class='user-name'>zzz</text>
+          <text class='user-address'>湖北省武汉市光谷大道当代国际花园</text>
+        </view>
+        <text class='user-phone'>12345678900</text>
+      </view>
+      <view class='user-bottom'>
+        <view class='user-selected'><icon></icon>设为默认地址</view>
+        <view class='user-btn-wrap'>
+          <text class='user-bj'>编辑</text>
+          <text class='user-delete'>删除</text>
+        </view>
+      </view>
+    </view> -->
+  </view>
+</view>
+<view class='address-bottom'>
+  <navigator class='user-add-address' url='../addAddress/addAddress'>
+    添加收获地址
+  </navigator>
+</view>

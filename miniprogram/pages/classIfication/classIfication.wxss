@@ -1,0 +1,15 @@
+/* pages/userConsole/userConsole.wxss */
+
+/* @import "../../style/guide.wxss"; */
+.page2-content-box{
+  margin-top: 66rpx;
+  width: 93.5%;
+  height: auto;
+}
+.page2-content-box .page2-content-link{
+  width: 100%;
+  margin-bottom:22rpx;
+}
+.page2-content-box .page2-content-img{
+  width: 100%;
+}

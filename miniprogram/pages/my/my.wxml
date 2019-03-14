@@ -1,0 +1,39 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class='page3-user-information'>
+    <!-- <image src='http://192.168.1.109:8080/wx-img/img3.jpg' mode="widthFix" class='user-img'></image>
+    <text class='user-name'>昵称123456</text> -->
+    <icon class='user-img'>
+      <open-data type="userAvatarUrl"></open-data> 
+    </icon>
+    <view class='user-name'><open-data type="userNickName" lang="zh_CN"></open-data></view>
+    
+    
+  </view>
+  <view class='page3-content-box'>
+    <navigator class='page3-link' hover-class='none'>
+      <image class='page3-link-img' src='http://192.168.1.109:8080/wx-img/my1.png' mode="widthFix"></image>
+      <text class='page3-link-text'>全部</text>
+    </navigator>
+    <navigator class='page3-link' hover-class='none'>
+      <image class='page3-link-img' src='http://192.168.1.109:8080/wx-img/my2.png' mode="widthFix"></image>
+      <text class='page3-link-text'>待支付</text>
+    </navigator>
+    <navigator class='page3-link' hover-class='none'>
+      <image class='page3-link-img' src='http://192.168.1.109:8080/wx-img/my3.png' mode="widthFix"></image>
+      <text class='page3-link-text'>已支付</text>
+    </navigator>
+    <navigator class='page3-link' hover-class='none'>
+      <image class='page3-link-img' src='http://192.168.1.109:8080/wx-img/my4.png' mode="widthFix"></image>
+      <text class='page3-link-text'>待收货</text>
+    </navigator>
+    <navigator class='page3-link' hover-class='none'>
+      <image class='page3-link-img' src='http://192.168.1.109:8080/wx-img/my5.png' mode="widthFix"></image>
+      <text class='page3-link-text'>已完成</text>
+    </navigator>
+  </view>
+  <view class='page3-bottom-box'>
+    <navigator class='my-evaluate' hover-class='none'>我的评价</navigator>
+    <navigator class='my-address' hover-class='none'>我的收获地址</navigator>
+  </view>
+</view>

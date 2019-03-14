@@ -1,0 +1,38 @@
+<!--pages/orderPage/orderPage.wxml-->
+<!-- 引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="container" style='margin-top: {{height}}px'>
+  <navigator class='selected-address' hover-class='none' url='../address/address'>添加收获地址</navigator>
+  <view class='goods-box'>
+  <!-- <block wx:for="{{}}" wx:key="index" >
+
+  </block> -->
+    <view class='goods-wrap'>
+      <view class='goods-imgs-wrap'>
+        <image class="goods-imgs" src='http://192.168.1.109:8080/wx-img/img4.jpg' mode='aspectFit'></image>
+      </view>
+      <view class='goods-text-wrap'>
+        <text class='goods-text-name'>绿植（绿植）</text>
+        <text class='goods-text-pen'>含盆</text>
+        <text class='goods-text-num'>x<text class='goods-num'>1</text></text>
+      </view>
+      <text class='goods-price-wrap'>单价：<text class='goods-price'>￥8.88</text></text>
+    </view>
+    <view class='goods-wrap'>
+      <view class='goods-imgs-wrap'>
+        <image class="goods-imgs" src='http://192.168.1.109:8080/wx-img/img2.jpg' mode='aspectFit'></image>
+      </view>
+      <view class='goods-text-wrap'>
+        <text class='goods-text-name'>泡茶菊花</text>
+        <text class='goods-text-pen'>不含盆</text>
+        <text class='goods-text-num'>x<text class='goods-num'>1</text></text>
+      </view>
+      <text class='goods-price-wrap'>单价：<text class='goods-price'>￥52</text></text>
+    </view>
+  </view>
+  <view class='goods-buy-wrap'>
+    <text class='goods-buy-text'>总计：</text>
+    <text class='goods-buy-price-wrap'>￥<text class='goods-buy-price'>60.88</text></text>
+    <button class='goods-btn-buy'>立即支付</button>
+  </view>
+</view>

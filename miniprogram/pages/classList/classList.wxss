@@ -1,0 +1,93 @@
+/* pages/classList/classList.wxss */
+
+/* @import "../../style/guide.wxss"; */
+page{
+  height: auto;
+}
+.container{
+  width: 100%;
+}
+.list-top-wrap{
+  margin: 16rpx auto 0;
+  width: 93%;
+  height: auto;
+  background: #fff;
+}
+.list-top-wrap .list-top-img{
+  width: 100%;
+}
+.list-top-wrap .list-nav{
+  margin-top: 30rpx;
+  /* margin-bottom: 16rpx; */
+  box-sizing: border-box;
+  padding: 0 10%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  color: #80848f;
+}
+.list-top-wrap .list-nav .list-nav-item{
+  position: relative;
+  padding-bottom: 16rpx;
+}
+.list-top-wrap .list-nav .list-nav-item.active{
+  color: #275439;
+  border-bottom: 4rpx solid #275439;
+  /* box-sizing: border-box; */
+}
+.container .page1-content-box{
+  margin-top: 30rpx;
+  width: 100%;
+  padding: 0 4%;
+  box-sizing: border-box;
+  height: 730rpx;
+  overflow:scroll;
+}
+.container .page1-content-box .page1-content-wrap{
+  position: relative;
+  width: 47%;
+  height: 600rpx;
+  background: #fff;
+  /* border: 2rpx solid rgba(0,0,0,0); */
+  border-radius: 12rpx;
+  margin-bottom: 22rpx;
+  overflow: hidden;
+}
+.container .page1-content-box .page1-content-wrap:nth-child(2n-1){
+  float: left;
+}
+.container .page1-content-box .page1-content-wrap:nth-child(2n){
+  float: right;
+}
+.page1-content-box .page1-content-wrap .page1-content-img-wrap{
+  width: 100%;
+  position: relative;
+  height: 400rpx;
+}
+.page1-content-box .page1-content-wrap image{
+  width: 100%;
+  height: 100%;
+}
+.page1-content-box .page1-content-wrap text{
+  width: 100%;
+  margin-top: 10rpx;
+  text-align: center;
+  display: block;
+  color: #333333;
+  font-size: 30rpx;
+}
+.page1-content-box .page1-content-wrap .page1-content-price{
+  color: #ff7d7d;
+  margin-top: 20rpx;
+}
+.page1-content-box .page1-content-wrap .page1-content-num{
+  position: absolute;
+  height: 64rpx;
+  left:0;
+  bottom: 0;
+  border-top: 2rpx solid #eaeaea;
+  line-height: 64rpx;
+  color: #999999;
+}

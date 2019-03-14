@@ -1,0 +1,66 @@
+<!--pages/classList/classList.wxml-->
+<!-- 引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="container" style='margin-top: {{height}}px'>
+  <view class='list-top-wrap'>
+    <image class='list-top-img' src='http://192.168.1.109:8080/wx-img/type1.png' mode='widthFix'></image>
+    <view class='list-nav'>
+      <text class='list-nav-item {{bl==="0"?"active":""}}' data-num='0' bindtap='changeTab'>按销量</text>
+      <text class='list-nav-item {{bl==="1"?"active":""}}' data-num='1' bindtap='changeTab'>好评</text>
+      <text class='list-nav-item {{bl==="2"?"active":""}}' data-num='2' bindtap='changeTab'>综合</text>
+    </view>
+  </view>
+  <view class='page1-content-box clearfix'>
+    <block wx:for="{{listData[bl]}}" wx:key="index">
+      <navigator class='page1-content-wrap' hover-class='none' url='{{item.url}}'>
+            <view class='page1-content-img-wrap'>
+                <image src='{{item.imgUrl}}' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>{{item.name}}</text>
+            <text class='page1-content-price'>{{item.price}}</text>
+            <text class='page1-content-num'>{{item.num}}</text>
+        </navigator>
+    </block>
+        
+        <!-- <navigator class='page1-content-wrap' hover-class='none'>
+            <view class='page1-content-img-wrap'>
+                <image src='http://192.168.1.109:8080/wx-img/img2.jpg' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>泡茶菊花</text>
+            <text class='page1-content-price'>￥52</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator>
+        <navigator class='page1-content-wrap' hover-class='none'>
+            <view class='page1-content-img-wrap'>
+                <image src='http://192.168.1.109:8080/wx-img/img1.jpg' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>红粉佳人(鲜切花)</text>
+            <text class='page1-content-price'>￥447</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator>
+        <navigator class='page1-content-wrap' hover-class='none'>
+            <view class='page1-content-img-wrap'>
+                <image src='http://192.168.1.109:8080/wx-img/img2.jpg' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>泡茶菊花</text>
+            <text class='page1-content-price'>￥52</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator>
+        <navigator class='page1-content-wrap' hover-class='none'>
+            <view class='page1-content-img-wrap'>
+                <image src='http://192.168.1.109:8080/wx-img/img1.jpg' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>红粉佳人(鲜切花)</text>
+            <text class='page1-content-price'>￥447</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator>
+        <navigator class='page1-content-wrap' hover-class='none'>
+            <view class='page1-content-img-wrap'>
+                <image src='http://192.168.1.109:8080/wx-img/img2.jpg' mode='aspectFill'></image>
+            </view>
+            <text class='page1-content-text'>泡茶菊花</text>
+            <text class='page1-content-price'>￥52</text>
+            <text class='page1-content-num'>暂无</text>
+        </navigator> -->
+    </view>
+</view>

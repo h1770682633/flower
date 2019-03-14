@@ -1,0 +1,48 @@
+<!--pages/shoppingCart/shoppingCart.wxml-->
+<view class="container">
+  <view class='shopping-list-box'>
+    <!-- <view class='shopping-item {{blNum?"active":""}}' bindtap='changePrice' data-num='0'>
+      <view class='shopping-selected'>
+        <icon class='shopping-selected-icon'></icon>
+      </view> 
+      <view class='item-img-wrap'>
+        <image class='item-img' src='http://192.168.1.109:8080/wx-img/img4.jpg' mode='aspectFit'></image>
+      </view>
+      <view class='item-text-wrap'>
+        <text class='item-text-name'>绿植（绿植）</text>
+        <text class='item-text-price'>￥8.88</text>
+      </view>
+      <view class="stepper">
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <text class="normal" bindtap="bindPlus">+</text>
+      </view>
+    </view> -->
+    <block wx:for="{{dataArr}}" wx:key="index">
+      <view class='shopping-item-wrap'>
+        <view class='shopping-item {{item.blNum?"active":""}}' bindtap='changeSelected' data-num='{{index}}'>
+          <view class='shopping-selected'>
+            <icon class='shopping-selected-icon'></icon>
+          </view> 
+          <view class='item-img-wrap'>
+            <image class='item-img' src='{{item.imgSrc}}' mode='aspectFit'></image>
+          </view>
+          <view class='item-text-wrap'>
+            <text class='item-text-name'>{{item.flowerName}}</text>
+            <text class='item-text-price'>￥<text class='item-text-price-num'>{{item.flowerPrice}}</text></text>
+          </view>
+        </view>
+        <view class="stepper">
+          <text class="{{item.minusStatus}}" capture-catch:tap="bindMinus" data-num='{{index}}'>-</text>
+          <input type="number" bindchange="bindManual"  value="{{item.num}}" data-num='{{index}}' />
+          <text class="normal" capture-catch:tap="bindPlus" data-num='{{index}}'>+</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 底部总价 -->
+  <view class='shopping-count-price '>
+    <text class='num-price'>共计：￥ <text class='money'>{{price}}</text> </text>
+    <navigator class='btn-true' hover-class='none' url='../orderPage/orderPage'>确认订单</navigator>
+  </view>
+</view>
